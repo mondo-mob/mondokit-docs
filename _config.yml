@@ -1,8 +1,10 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: MondoKit
+description: Simplify building NodeJS applications on cloud platforms
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
-
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  "MondoKit on GitHub":
+    - "//github.com/mondo-mob/mondokit"
+
+aux_links_new_tab: true
+color_scheme: light
