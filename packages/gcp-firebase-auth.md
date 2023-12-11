@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Firebase Authentication
+title: GCP Firebase Authentication
+description: Use GCP Firebase Auth to authenticate your users
 parent: Packages
 nav_order: 11
 ---
 
 # MondoKit GCP Firebase Auth
 
-Use Firebase Auth to authenticate your users
+Use GCP Firebase Auth to authenticate your users
 
 ## Installation
 

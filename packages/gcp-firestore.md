@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Firestore
+title: GCP Firestore
+description: Use Firestore in Native mode as your app db, including DataLoader
 parent: Packages
 nav_order: 2
 ---
 
 # MondoKit GCP Firestore
 
-Use Firestore in Native mode as your app db including [DataLoader](https://github.com/graphql/dataloader) implementation GraphQL
- and request level caching.
+Use Firestore in Native mode as your app db including [DataLoader](https://github.com/graphql/dataloader).
 ## Installation
 
 ```sh

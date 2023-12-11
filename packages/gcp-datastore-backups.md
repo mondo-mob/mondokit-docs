@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Datastore Backups
+title: GCP Datastore Backups
+description: Perform scheduled GCP Datastore exports from your app
 parent: Packages
 nav_order: 6
 ---

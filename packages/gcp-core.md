@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Core
+title: GCP Core
+description: The core Google Cloud Platform (GCP) stuff needed for most apps
 parent: Packages
 nav_order: 1
 ---
 
 # MondoKit GCP Core
 
-The core stuff needed for most apps.
+The core Google Cloud Platform (GCP) stuff needed for most apps.
 
 ## Installation
 

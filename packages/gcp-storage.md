@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Storage
+title: GCP Storage
+description: Use Cloud Storage in your app
 parent: Packages
 nav_order: 7
 ---

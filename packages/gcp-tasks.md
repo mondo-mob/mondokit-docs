@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Tasks
+title: GCP Tasks
+description: Use Google Cloud Tasks to call task handler endpoints in your app
 parent: Packages
 nav_order: 8
 ---
 
 # MondoKit GCP Tasks
 
-Use Cloud Tasks to call task handler endpoints in your app.
+Use Google Cloud Tasks to call task handler endpoints in your app.
 
 ## Installation
 

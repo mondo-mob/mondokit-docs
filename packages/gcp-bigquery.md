@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Big Query
+title: GCP BigQuery
 parent: Packages
+description: Simplify BigQuery client initialisation and common BigQuery operations
 nav_order: 9
 ---
 
 # MondoKit GCP BigQuery
 
-Simplifies BigQuery client initialisation and common BigQuery operations.
+Simplify BigQuery client initialisation and common BigQuery operations.
 
 ## Installation
 

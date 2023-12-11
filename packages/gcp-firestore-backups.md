@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Firestore Backups
+title: GCP Firestore Backups
+description: Perform scheduled Firestore exports from your app
 parent: Packages
 nav_order: 3
 ---

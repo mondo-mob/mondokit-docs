@@ -1,13 +1,14 @@
 ---
 layout: default
-title: Firestore Migrations
+title: GCP Firestore Migrations
+description: Set up and run migrations, with state stored in firestore and safety across clusters
 parent: Packages
 nav_order: 4
 ---
 
 # MondoKit GCP Firestore Migrations
 
-Setup and Run migrations, with state stored in firestore and a mutex lock to ensure only one is run at a time
+Set up and run migrations, with state stored in firestore and a mutex lock to ensure only one is run at a time
 
 ## Installation
 

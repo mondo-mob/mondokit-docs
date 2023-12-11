@@ -1,6 +1,7 @@
 ---
 layout: default
-title: Google Authentication
+title: GCP Google Authentication
+description: Utilities extending on Google Auth Library, such as middleware to validate Google JWT
 parent: Packages
 nav_order: 10
 ---
