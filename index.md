@@ -8,7 +8,7 @@ permalink: /
 
 # MondoKit
 
-Simplify building NodeJS applications on Google App Engine (GAE)
+Simplify building NodeJS applications on cloud platforms
 
 ## Installation
 
