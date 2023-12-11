@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 5
 ---
 
-# MondoKit GCP DATASTORE
+# MondoKit GCP Datastore
 
 Use Cloud Datastore (or Firestore in Datastore Mode) as your app db including [DataLoader](https://github.com/graphql/dataloader) implementation GraphQL
 and request level caching.

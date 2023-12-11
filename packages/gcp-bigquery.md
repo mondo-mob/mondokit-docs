@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 9
 ---
 
-# MondoKit GCP BIGQUERY
+# MondoKit GCP BigQuery
 
 Simplifies BigQuery client initialisation and common BigQuery operations.
 

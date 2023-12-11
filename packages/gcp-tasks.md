@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 8
 ---
 
-# MondoKit GCP TASKS
+# MondoKit GCP Tasks
 
 Use Cloud Tasks to call task handler endpoints in your app.
 

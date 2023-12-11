@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 3
 ---
 
-# MondoKit GCP FIRESTORE BACKUPS
+# MondoKit GCP Firestore Backups
 
 Module to perform scheduled Firestore exports in your app.
 

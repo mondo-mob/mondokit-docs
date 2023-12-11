@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 7
 ---
 
-# MondoKit GCP STORAGE
+# MondoKit GCP Storage
 
 Use Cloud Storage in your app.
 

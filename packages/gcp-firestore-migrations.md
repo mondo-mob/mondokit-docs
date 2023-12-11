@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 4
 ---
 
-# MondoKit GCP MIGRATIONS
+# MondoKit GCP Firestore Migrations
 
 Setup and Run migrations, with state stored in firestore and a mutex lock to ensure only one is run at a time
 

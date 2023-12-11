@@ -7,4 +7,4 @@ aux_links:
     - "//github.com/mondo-mob/mondokit"
 
 aux_links_new_tab: true
-color_scheme: light
+color_scheme: dark

@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 6
 ---
 
-# MondoKit GCP DATASTORE BACKUPS
+# MondoKit GCP Datastore Backups
 
 Module to perform scheduled Datastore exports in your app.
 

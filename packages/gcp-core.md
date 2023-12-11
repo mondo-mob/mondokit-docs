@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 1
 ---
 
-# MondoKit GCP CORE
+# MondoKit GCP Core
 
 The core stuff needed for most apps.
 

@@ -5,7 +5,7 @@ parent: Packages
 nav_order: 11
 ---
 
-# MondoKit GCP FIREBASE AUTH
+# MondoKit GCP Firebase Auth
 
 Use Firebase Auth to authenticate your users
 
