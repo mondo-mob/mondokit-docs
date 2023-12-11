@@ -21,7 +21,7 @@ npm install @mondokit/gcp-datastore
 ### DatastoreProvider
 Initialise Datastore to be accessed elsewhere in your app.
 
-```
+```typescript
 // On app startup
 datastoreProvider.init();
 
@@ -34,7 +34,7 @@ const [doc] = await datastore.get(key);
 ### DatastoreLoader
 Dataloader implementation to help batch and cache db requests. Used internally by DatastoreRepository
 
-```
+```typescript
 // Apply middleware to create a new dataloader on each request
 app.use(datastoreLoader());
 ```
@@ -44,7 +44,7 @@ Access your collections through typed repositories.
 
 Step 1: Define your entity
 
-```
+```typescript
 // Define your class schema
 const demoItemSchema = t.type({
   id: t.string,
@@ -55,7 +55,7 @@ const demoItemSchema = t.type({
 type DemoItem = t.TypeOf<typeof demoItemSchema>;
 
 // Initialise repository for the collection we want to access data in
-const repository = new DatastoreRepository<DemoItem>("demo-items", {validator: demoItemSchema });
+const repositoryDirect = new DatastoreRepository<DemoItem>("demo-items", {validator: demoItemSchema });
 
 // OR define a custom class first
 class DemoItemRepository extends DatastoreRepository<DemoItem> {
@@ -75,40 +75,20 @@ const item = await repository.get("id123");
 const list = await demoItemsRepository.query();
 
 // Reindex (re-save) all items in batches (200 by default)
-const totalCount = await repository.reindexInBatches();
-const totalCount = await repository.reindexInBatches({ batchSize: 1000 });
+const totalCount1 = await repository.reindexInBatches();
+const totalCount2 = await repository.reindexInBatches({ batchSize: 1000 });
 
 // Reindex (re-save) all items in batches with "quiet" mode (no logs written)
-const totalCount = await repository.reindexInBatches({ quiet: true });
+const totalCount3 = await repository.reindexInBatches({ quiet: true });
 
 // Reindex (re-save) all items in batches, with a transformation per item
-const totalCount = await repository.reindexInBatches({ transform: ({id, name}) => ({ id, name: `UPDATED ${name}` })});
+const totalCount4 = await repository.reindexInBatches({ transform: ({id, name}) => ({ id, name: `UPDATED ${name}` })});
 
 // Reindex (re-save) all items at once (WARNING: Small datasets only)
-const items = await repository.reindex();
+const items1 = await repository.reindex();
 
 // Reindex (re-save) all items at once (WARNING: Small datasets only), with a transformation per item (WARNING: Small datasets only)
-const items = await repository.reindex(({id, name}) => ({ id, name: `UPDATED ${name}` }));
+const items2 = await repository.reindex(({id, name}) => ({ id, name: `UPDATED ${name}` }));
 
 ```
 
-### @Transactional
-
-Annotate functions to make them transactional.
-
-NOTE: Requires `"experimentalDecorators": true` set in your `tsconfig.json`
-
-```typescript
-class UserService {
-  constructor(
-    public userRepo: DatastoreRepository<User>,
-  ) {}
-
-  @Transactional()
-  async addCredits(userId: string, credits: number): Promise<User> {
-    const user = this.userRepo.get(userId);
-    user.credits = user.credits + credits;
-    return this.userRepo.save(user);
-  }
-}
-```

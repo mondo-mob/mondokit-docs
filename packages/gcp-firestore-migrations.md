@@ -31,7 +31,7 @@ Use naming convention with date and index number to version migrations
 
    `migrations/v_20220122_001_addUsers.ts`
 
-```
+```typescript
 const userRepository = new TimestampedRepository<User>("users");
 
 export const v_20220122_001_addUsers: AutoMigration = {
@@ -62,7 +62,7 @@ export const v_20220122_001_addUsers: AutoMigration = {
 ```
 
 #### Application Startup (index.ts)
-```
+```typescript
 import { bootstrap } from "@mondokit/gcp-core";
 import { bootstrapMigrations } from "@mondokit/gcp-firestore-migrations";
 import { firestoreLoader, firestoreProvider, newTimestampedEntity } from "@mondokit/gcp-firestore";

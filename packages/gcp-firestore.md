@@ -20,7 +20,7 @@ npm install @mondokit/gcp-firestore
 ### FirestoreProvider
 Initialise Firestore to be accessed elsewhere in your app.
 
-```
+```typescript
 // On app startup
 firestoreProvider.init();
 
@@ -32,7 +32,7 @@ const doc = await firestore.doc('my-items/id123').get();
 ### FirestoreLoader
 Dataloader implementation to help batch and cache db requests. Used internally by FirestoreRepository
 
-```
+```typescript
 // Apply middleware to create a new dataloader on each request
 app.use(firestoreLoader());
 ```
@@ -40,7 +40,7 @@ app.use(firestoreLoader());
 ### FirestoreRepository
 Access your collections through typed repositories.
 
-```
+```typescript
 // Define your class entity
 interface DemoItem {
   id: string;
@@ -48,7 +48,7 @@ interface DemoItem {
 }
 
 // Initialise repository for the collection we want to access data in
-const repository = new FirestoreRepository<DemoItem>("demo-items");
+const repositoryDirect = new FirestoreRepository<DemoItem>("demo-items");
 
 // OR define a custom class first
 class DemoItemRepository extends FirestoreRepository<DemoItem> {
@@ -81,7 +81,7 @@ await repository.delete("id123", "id234");
 const list = await repository.query();
 
 // Query items with ordering
-const results = repository.query({
+const results1 = repository.query({
  sort: {
    property: "owner",
    direction: "desc",
@@ -89,7 +89,7 @@ const results = repository.query({
 })
 
 // Query items for specific fields (i.e. projection)
-const results = await repository.query({
+const results2 = await repository.query({
   filters: [
     {
       fieldPath: "owner",
@@ -101,7 +101,7 @@ const results = await repository.query({
 });
 
 // Query items using Firebase Filter, allows for OR queries
-const results = await repository.query({
+const results3 = await repository.query({
   filters: Filter.or(
     Filter.where("id", "==", "123"), 
     Filter.where("id", "==", "567"))
@@ -109,7 +109,7 @@ const results = await repository.query({
 )
 
 // Query items for ids only (empty projection)
-const results = await repository.query({
+const results4 = await repository.query({
   filters: [
     {
       fieldPath: "owner",
@@ -124,7 +124,7 @@ const results = await repository.query({
 
 
 // Query items with limit/offset
-const results = await repository.query({
+const results5 = await repository.query({
   filters: [
     {
       fieldPath: "owner",
@@ -137,7 +137,7 @@ const results = await repository.query({
 });
 
 // Query items with cursors
-const results = await repository.query({
+const results6 = await repository.query({
   sort: { property: "owner" },
   startAfter: ["user2"],
 });
@@ -157,7 +157,7 @@ const countWithFilter = await repository.count({
 });
 
 // Query only the ids using a projection query
-const results = await repository.queryForIds({
+const results7 = await repository.queryForIds({
   sort: { property: "owner" },
   startAfter: ["user2"],
   // All query options supported, except for the "select" prop
@@ -170,7 +170,7 @@ const results = await repository.queryForIds({
 ### TimestampedRepository
 Convenience Repository type to auto-populate createdAt/updatedAt timestamps on insert/save/update
 
-```
+```typescript
 // Define your class entity
 interface DemoItem extends TimestampedEntity {
   name: string;
@@ -198,25 +198,4 @@ await runWithRequestStorage(async () => {
   setRequestStorageValue(DISABLE_TIMESTAMP_UPDATE, true);
   return repository.save(item);
 });
-```
-
-### @Transactional
-
-Annotate functions to make them transactional.
-
-NOTE: Requires `"experimentalDecorators": true` set in your `tsconfig.json`
-
-```typescript
-class UserService {
-  constructor(
-    public userRepo: FirestoreRepository<User>,
-  ) {}
-
-  @Transactional()
-  async addCredits(userId: string, credits: number): Promise<User> {
-    const user = this.userRepo.get(userId);
-    user.credits = user.credits + credits;
-    return this.userRepo.save(user);
-  }
-}
 ```

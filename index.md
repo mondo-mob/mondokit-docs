@@ -27,7 +27,7 @@ npm install @mondokit/gcp-firebase-auth
 ## Usage
 Here's an example Express app configuration that uses the core library as well as both Firestore and Firebase Auth.
 
-```
+```typescript
 // Create a request aware logger
 const logger = createLogger("mondokit-demo");
 
@@ -42,7 +42,7 @@ firestoreProvider.init();
 app.use(firestoreLoader());
 
 // Add firebase auth support
-const firebaseAdmin = admin.initializeApp({ projectId: <my-gcp-project-id> });
+const firebaseAdmin = admin.initializeApp({ projectId: "<my-gcp-project-id>" });
 app.use(verifyFirebaseUser(firebaseAdmin));
 
 // Add handlers as required
