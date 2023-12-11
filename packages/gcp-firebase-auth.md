@@ -1,6 +1,6 @@
 ---
 layout: default
-title: GCP Firebase Authentication
+title: GCP Firebase Auth
 description: Use GCP Firebase Auth to authenticate your users
 parent: Packages
 nav_order: 11
