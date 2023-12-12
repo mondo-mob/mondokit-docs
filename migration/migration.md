@@ -23,14 +23,14 @@ In most cases, you can simply search and replace your imports of `@mondomob/gae-
 
 The only exceptions to this are:
 * the [unsupported packages](#unsupported-packages)
-* [@mondomob/gae-js-migrations](https://mondo-mob.github.io/gae-js-docs/packages/gae-js-migrations.html) is specific to `Firestore` and thus has been renamed to [@mondokit/gcp-firestore-migrations](https://mondokit.dev/packages/gcp-firestore-migrations.html)
+* [@mondomob/gae-js-migrations](https://mondo-mob.github.io/gae-js-docs/packages/gae-js-migrations.html) is specific to `Firestore` and thus has been renamed to [@mondokit/gcp-firestore-migrations](../packages/gcp-firestore-migrations.md)
 
 ## Breaking changes per package
 In addition to migration steps outlined in [Steps to migrate](#steps-to-migrate), the following specific breaking changes need to be considered.
 
-* [@mondokit/gcp-firestore](https://mondokit.dev/packages/gcp-firestore.html) 
+* [@mondokit/gcp-firestore](../packages/gcp-firestore.md) 
   * removed the `@Transactional` annotation as it was based on the original _experimental decorators_. Rather than update this, we have kept the library lightweight and omitted it altogether.
-* [@mondokit/gcp-datastore](https://mondokit.dev/packages/gcp-datastore.html) 
+* [@mondokit/gcp-datastore](../packages/gcp-datastore.md) 
   * removed the `@Transactional` annotation as it was based on the original _experimental decorators_. Rather than update this, we have kept the library lightweight and omitted it altogether.
 
 ## Steps to migrate
