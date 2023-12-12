@@ -37,7 +37,7 @@ In addition to migration steps outlined in [Steps to migrate](#steps-to-migrate)
 
 For each package, the following steps should suffice:
 
-1. If possible, upgrade your `@google-cloud` lib dependencies where you have them explicitly defined
+1. If possible, upgrade your `@google-cloud` lib dependencies where you have them explicitly defined. Check the changelog entries for each lib to see breaking changes. The latest lib may not be a hard requirement for migrating to `@mondokit` libs.
 2. Validate nothing breaks
 3. `npm uninstall @mondomob/gae-js-xxx` lib
 4. `npm i @mondokit/gcp-xxx` lib (see [package mapping](#package-mapping))
