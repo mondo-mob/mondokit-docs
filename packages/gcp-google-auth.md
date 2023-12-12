@@ -21,6 +21,8 @@ npm install @mondokit/gcp-google-auth
 ### requiresGoogleJwt Middleware
 Middleware to require a valid Google JWT token, for your endpoints. 
 
+> **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
+
 An example can be found in the [Example Pub/Sub JWT](https://cloud.google.com/pubsub/docs/push#jwt_format).
 
 This middleware will _always_ verify:

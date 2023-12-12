@@ -10,6 +10,8 @@ nav_order: 6
 
 Module to perform scheduled Datastore exports in your app.
 
+> **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
+
 Backups can be configured to perform full or partial exports of Datastore into Google Cloud Storage.
 
 As well as regular backups you can configure automatic export and import into BigQuery.

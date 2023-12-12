@@ -10,6 +10,8 @@ nav_order: 8
 
 Use Google Cloud Tasks to call task handler endpoints in your app.
 
+> **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
+
 ## Installation
 
 ```sh

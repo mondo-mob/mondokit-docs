@@ -10,6 +10,8 @@ nav_order: 9
 
 Simplify BigQuery client initialisation and common BigQuery operations.
 
+> **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
+
 ## Installation
 
 ```sh

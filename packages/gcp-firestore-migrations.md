@@ -10,6 +10,8 @@ nav_order: 4
 
 Set up and run migrations, with state stored in firestore and a mutex lock to ensure only one is run at a time
 
+> **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
+
 ## Installation
 
 ```sh
