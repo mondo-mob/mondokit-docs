@@ -12,6 +12,10 @@ Performing the migration from `CommonJS` to `ESM` is beyond this guide, as there
 
 If you cannot upgrade to `ESM` then you will need to defer upgrading to this library and continue with `gae-js`. Note that `gae-js` will work in an `ESM` build, so you can do the upgrade and make sure everything runs fine first.
 
+## Minimum requirements
+
+Through internal dependency updates, the minimum NodeJS version supported is 18. Some libraries may work with NodeJS 14.
+
 ## Unsupported packages
 
 * [@mondomob/gae-js-search](https://mondo-mob.github.io/gae-js-docs/packages/gae-js-gae-search.html) - this package utilises the deprecated and soon to be unsupported App Engine Search API. Although Google have extended grace periods a few times on this, they have made it clear that it will not stay around. As such we do not aim to maintain library support for the solution for proxying to a Java search service.
