@@ -6,7 +6,7 @@ description: "Simplify building NodeJS applications on cloud platforms"
 permalink: /
 ---
 
-<div style="display: flex; align-items: center; gap: 32px; padding-bottom: 16px">
+<div style="display: flex; align-items: center; gap: 16px; padding-bottom: 16px">
     <img src="./assets/images/mondokit-logo.png" alt="MondoKit Logo" style="max-height: 100px" />
     <div>
         <h1 id="mondokit" style="padding: 0">MondoKit</h1>
