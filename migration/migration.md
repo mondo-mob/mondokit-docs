@@ -49,6 +49,8 @@ In addition to migration steps outlined in [Steps to migrate](#steps-to-migrate)
     * `GAEJS_ENVIRONMENT` => `MONDOKIT_ENVIRONMENT`
     * `GAEJS_CONFIG_DIR` => `MONDOKIT_CONFIG_DIR`
     * `GAEJS_OVERRIDES` => `MONDOKIT_CONFIG_OVERRIDES`
+  * Removed deprecated items
+    * `asArray` has been deprecated for a while. Replace with [lodash castArray](https://lodash.com/docs/4.17.15#castArray) instead, as it's exactly what this function did.
 * [@mondokit/gcp-tasks](../packages/gcp-tasks.md)
   * Search/replace all instances:
     * `gaeJsTask` => `appEngineTask`
