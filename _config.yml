@@ -2,6 +2,8 @@ title: MondoKit
 description: Simplify building NodeJS applications on cloud platforms
 theme: just-the-docs
 
+logo: "/assets/images/mondokit-logo.png"
+favicon_ico: "/assets/images/mondokit-logo.ico"
 aux_links:
   "MondoKit on GitHub":
     - "//github.com/mondo-mob/mondokit"
