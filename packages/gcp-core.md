@@ -25,10 +25,10 @@ There are a few conventions that must be followed for the library to function co
   of the environment they represent. e.g. `my-project-dev` implies this is the "dev" environment and
   configuration will be loaded from the dev.json config file.
 * To help the library know what runtime environment it is executing in you must define an environment
-  variable called GAEJS_ENVIRONMENT. e.g. for appengine in your `app.yaml` file:
+  variable called MONDOKIT_ENVIRONMENT. e.g. for appengine in your `app.yaml` file:
     ```yaml
     env_variables:
-      GAEJS_ENVIRONMENT: appengine
+      MONDOKIT_ENVIRONMENT: appengine
     ```
 
 ## Components
@@ -96,7 +96,7 @@ Typed configuration loader that loads and merges configuration from files, envir
 
 NOTE: For GCP environments the projectId can be automatically identified and by default the environment is 
 derived from the project id (see conventions). For local development the projectId must be explicitly 
-defined. The recommended approach is to set GAEJS_PROJECT environment variable to the form "your-project-local" to 
+defined. The recommended approach is to set MONDOKIT_PROJECT environment variable to the form "your-project-local" to 
 match the GCP project name conventions. This will identify the environment as `local` and load configuration from `local.json`.
 
 Basic setup:

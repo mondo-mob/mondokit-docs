@@ -45,6 +45,10 @@ In addition to migration steps outlined in [Steps to migrate](#steps-to-migrate)
     * `gaeJsCoreConfigurationSchema` => `gcpCoreConfigurationSchema`
     * `gaeJsCron` => `appEngineCron`
     * `gaeRequestLogger` => `gcpRequestLogger`
+  * Environment variable names changed. Check your code, CI, runtime configuration and make the following replacements:
+    * `GAEJS_ENVIRONMENT` => `MONDOKIT_ENVIRONMENT`
+    * `GAEJS_CONFIG_DIR` => `MONDOKIT_CONFIG_DIR`
+    * `GAEJS_OVERRIDES` => `MONDOKIT_CONFIG_OVERRIDES`
 * [@mondokit/gcp-tasks](../packages/gcp-tasks.md)
   * Search/replace all instances:
     * `gaeJsTask` => `appEngineTask`
