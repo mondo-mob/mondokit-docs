@@ -8,13 +8,13 @@ permalink: /about-the-team
 # Mondo
 [https://mondo.ventures](https://mondo.ventures)
 
-The Mondo team, and friends, have shared these library through various incarnations and battle tested with many projects. We are a tech and product services company located in Australia with people in Sydney, Melbourne, Brisbane and Adelaide.
+The Mondo team, and friends, have shared these libraries, through various incarnations, and after battle testing with many projects. We are a tech and product services company located in Australia with people in Sydney, Melbourne, Brisbane and Adelaide.
 
 Drop us a line some time - always happy to meet new people.
 
 
 <p style="text-align: center; padding: 16px 0">
-    <a href="https://mondo.ventures/about/" target="_blank"><img src="https://mondo.ventures/wp-content/uploads/2023/02/Mondo-AGM-2022-2-scaled.jpg" alt="Mondo team" style="max-height: 400px"/></a>
+    <a href="https://mondo.ventures/about/" title="About Mondo" target="_blank"><img src="https://mondo.ventures/wp-content/uploads/2023/02/Mondo-AGM-2022-2-scaled.jpg" alt="Mondo team"/></a>
 </p>
 
 
