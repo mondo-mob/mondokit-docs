@@ -41,11 +41,11 @@ Set and fetch request level data without needing to pass any variables around.
 
 
 ```typescript
-// Create your express app and add core mondokitApp middleware
+// Create your express app and add core gcpApp middleware
 import { userRequestStorage } from "./user-request-storage";
 
 const app = express();
-app.use(mondokitApp);
+app.use(gcpApp);
 
 // Define a custom typed store
 export const customRequestStorage = new RequestStorageStore<string>("_my_custom_key");
@@ -79,9 +79,9 @@ When log entries are made from within a request they can be correlated together 
 // Create your logger anywhere (e.g. can be before logging middleware applied)
 const logger = createLogger("mondokit-demo");
 
-// Create your express app and add core mondokitApp middleware
+// Create your express app and add core gcpApp middleware
 const app = express();
-app.use(mondokitApp);
+app.use(gcpApp);
 
 logger.info("This log entry is outside of request");
 

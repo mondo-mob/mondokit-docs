@@ -62,8 +62,8 @@ In Google Cloud Console IAM & Admin add the following IAM role:
 
 e.g. at the root application
 ```typescript
-  app.use("/crons", gcpCron, datastoreBackupCronRoutes());
-  app.use("/tasks", gcpTask, datastoreBackupTaskRoutes());
+  app.use("/crons", appEngineCron, datastoreBackupCronRoutes());
+  app.use("/tasks", appEngineTask, datastoreBackupTaskRoutes());
 ```
 
 or as part of a sub-application/sub-router
@@ -72,13 +72,13 @@ or as part of a sub-application/sub-router
   cronsController.use(datastoreBackupCronRoutes())
   cronsController.get("/some-other-cron", asyncHandler(async () => {}))
 
-  app.use("/crons", gcpCron, cronsController);
+  app.use("/crons", appEngineCron, cronsController);
 
   const tasksController = Router();
   tasksController.use(datastoreBackupTaskRoutes())
   tasksController.post("/some-other-task", asyncHandler(async () => {}))
 
-  app.use("/tasks", gcpTask, tasksController);
+  app.use("/tasks", appEngineTask, tasksController);
 ```
 
 ### Add Cron schedule

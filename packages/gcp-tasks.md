@@ -25,7 +25,7 @@ npm install @mondokit/gcp-tasks
 tasksProvider.init();
 
 // Create task handlers
-app.use("/tasks", gcpTask);
+app.use("/tasks", appEngineTask);
 app.post("/tasks/poll-status", (req, res) => res.send("OK"));
 app.post("/tasks/start-job", (req, res) => res.send("OK"));
 
@@ -87,7 +87,7 @@ await taskService.enqueue("poll-status", {
 });
 ```
 
-### gcpTask Middleware
+### appEngineTask Middleware
 A convenience middleware collection for your task endpoints to:
 
 a) verify the request is a genuine Cloud Tasks request (see verifyTask middleware) and
@@ -95,7 +95,7 @@ b) extend the NodeJS request timeout to 10 minutes (the default is 120s)
 
 ```typescript
 // Apply middleware however you normally would
-app.use("/tasks", gcpTask);
+app.use("/tasks", appEngineTask);
 
 // Now any matching routes will be protected and timeout extended
 app.post("/tasks/start-job", (req, res) => res.send("OK"));
@@ -104,7 +104,7 @@ app.post("/tasks/poll-status", (req, res) => res.send("OK"));
 
 ### verifyTask Middleware
 Use this on your task handlers to ensure they are only called by genuine Cloud Tasks requests.
-NOTE: This is already part of the gcpTask middleware so no need to apply again if using that.
+NOTE: This is already part of the appEngineTask middleware so no need to apply again if using that.
 
 ```typescript
 // Apply middleware however you normally would
