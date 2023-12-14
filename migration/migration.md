@@ -31,11 +31,45 @@ The only exceptions to this are:
 
 ## Breaking changes per package
 In addition to migration steps outlined in [Steps to migrate](#steps-to-migrate), the following specific breaking changes need to be considered.
+* [@mondokit/gcp-core](../packages/gcp-core.md)
+  * The default logger needs to be _explicitly_ set to use the `GCP` one, given the logger now resides in our [core](../packages/core.md) package that is cloud agnostic. Add the following to your initialisation file:
 
+    ```typescript
+    import { defaultLoggerProvider, googleCloudLogger } from "@mondokit/gcp-core";
+    // ...
+    defaultLoggerProvider.set(googleCloudLogger());
+    ```
+  * Names with `gaeJs` or `GaeJs` have been renamed. Search/replace all instances below:
+    * `gaeJsApp` => `gcpApp`
+    * `GaeJsCoreConfiguration` => `GcpCoreConfiguration`
+    * `gaeJsCoreConfigurationSchema` => `gcpCoreConfigurationSchema`
+    * `gaeJsCron` => `appEngineCron`
+    * `gaeRequestLogger` => `gcpRequestLogger`
+* [@mondokit/gcp-tasks](../packages/gcp-tasks.md)
+  * Search/replace all instances:
+    * `gaeJsTask` => `appEngineTask`
+* [@mondokit/gcp-storage](../packages/gcp-storage.md)
+  * Search/replace all instances:
+    * `GaeJsStorageConfiguration` => `GcpStorageConfiguration`
+    * `gaeJsStorageConfigurationSchema` => `gcpStorageConfigurationSchema`
+* [@mondokit/gcp-bigquery](../packages/gcp-bigquery.md)
+  * Search/replace all instances:
+    * `GaeJsBigQueryConfiguration` => `GcpBigQueryConfiguration`
+    * `gaeJsBigQueryConfigurationSchema` => `gcpBigQueryConfigurationSchema`
 * [@mondokit/gcp-firestore](../packages/gcp-firestore.md) 
   * removed the `@Transactional` annotation as it was based on the original _experimental decorators_. Rather than update this, we have kept the library lightweight and omitted it altogether.
+  * Search/replace all instances:
+    * `GaeJsFirestoreConfiguration` => `GcpFirestoreConfiguration`
+    * `gaeJsFirestoreConfigurationSchema` => `gcpFirestoreConfigurationSchema`
 * [@mondokit/gcp-datastore](../packages/gcp-datastore.md) 
   * removed the `@Transactional` annotation as it was based on the original _experimental decorators_. Rather than update this, we have kept the library lightweight and omitted it altogether.
+  * Search/replace all instances:
+    * `GaeJsDatastoreConfiguration` => `GcpDatastoreConfiguration`
+    * `gaeJsDatastoreConfigurationSchema` => `gcpDatastoreConfigurationSchema`
+* [@mondokit/gcp-datastore-backups](../packages/gcp-datastore-backups.md)
+  * Search/replace all instances:
+    * `GaeJsDatastoreBackupConfiguration` => `GcpDatastoreBackupConfiguration`
+    * `gaeJsDatastoreBackupConfigSchema` => `gcpDatastoreBackupConfigSchema`
 
 ## Steps to migrate
 
