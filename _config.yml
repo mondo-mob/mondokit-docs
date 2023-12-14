@@ -3,7 +3,7 @@ description: Simplify building NodeJS applications on cloud platforms
 theme: just-the-docs
 
 logo: "/assets/images/mondokit-with-name.png"
-favicon_ico: "/assets/images/mondokit-logo.ico"
+favicon_ico: "/assets/images/mondokit-tool.ico"
 aux_links:
   "MondoKit on GitHub":
     - "//github.com/mondo-mob/mondokit"
