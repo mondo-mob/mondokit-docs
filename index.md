@@ -6,11 +6,20 @@ description: "Simplify building NodeJS applications on cloud platforms"
 permalink: /
 ---
 
-# MondoKit
+<div style="display: flex; align-items: center; gap: 32px; padding-bottom: 16px">
+    <img src="./assets/images/mondokit-logo.png" alt="MondoKit Logo" style="max-height: 100px" />
+    <div>
+        <h1 id="mondokit" style="padding: 0">MondoKit</h1>
+    </div>
+</div>
+
+
 
 Simplify building NodeJS applications on cloud platforms. 
 
 > **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
+
+
 
 ## Installation
 
