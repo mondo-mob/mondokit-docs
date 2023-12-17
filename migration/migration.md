@@ -40,7 +40,7 @@ In addition to migration steps outlined in [Steps to migrate](#steps-to-migrate)
     defaultLoggerProvider.set(googleCloudLogger());
     ```
   * Names with `gaeJs` or `GaeJs` have been renamed. Search/replace all instances below:
-    * `gaeJsApp` => `gcpApp`
+    * `gaeJsApp` => `mondokitGcpMiddleware`
     * `GaeJsCoreConfiguration` => `GcpCoreConfiguration`
     * `gaeJsCoreConfigurationSchema` => `gcpCoreConfigurationSchema`
     * `gaeJsCron` => `appEngineCron`

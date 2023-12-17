@@ -46,7 +46,7 @@ const logger = createLogger("mondokit-demo");
 const app = express();
 
 // Add the core logging and async storage middlewares
-app.use(gcpApp);
+app.use(mondokitGcpMiddleware);
 
 // Add firestore support (with dataloader for graphql support)
 firestoreProvider.init();
