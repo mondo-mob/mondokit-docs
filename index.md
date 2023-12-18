@@ -81,7 +81,7 @@ These libraries have most recently evolved from [GAE JS](https://github.com/mond
 
 ## Components
 
-### gcp-core ([documentation](packages/gcp-core.md))
+### gcp-core ([documentation](packages/gcp-core.html))
 
 #### Async Local Storage Support
 
@@ -110,11 +110,11 @@ Framework for adding search capability to your data layer
 #### Other stuff
 A few other (hopefully) useful things to help you along the way and stop reinventing the wheel
 
-### gcp-bigquery ([documentation](packages/gcp-bigquery.md))
+### gcp-bigquery ([documentation](packages/gcp-bigquery.html))
 #### Use BigQuery in your app
 Simplifies client initialisation and common BQ tasks
 
-### gcp-datastore ([documentation](packages/gcp-datastore.md))
+### gcp-datastore ([documentation](packages/gcp-datastore.html))
 
 #### Use Cloud Datastore (or Firestore in Datastore mode)
 Access your collections through typed repositories, backed by a DataLoader implementation to support GraphQL.
@@ -122,17 +122,17 @@ Access your collections through typed repositories, backed by a DataLoader imple
 #### Simple transaction support
 Use annotations on your methods to make them transactional
 
-### gcp-datastore-backups ([documentation](packages/gcp-datastore-backups.md))
+### gcp-datastore-backups ([documentation](packages/gcp-datastore-backups.html))
 #### Automate Datastore Exports
 Run/schedule full or partial exports of Datastore into Google Cloud Storage
 #### Import into BigQuery
 Schedule Extract and Load jobs to export from Datastore into BigQuery
 
-### gcp-firebase-auth ([documentation](packages/gcp-firebase-auth.md))
+### gcp-firebase-auth ([documentation](packages/gcp-firebase-auth.html))
 #### Use Firebase Auth to authenticate your users
 Middleware to verify Firebase Auth tokens and set user into the request
 
-### gcp-firestore ([documentation](packages/gcp-firestore.md))
+### gcp-firestore ([documentation](packages/gcp-firestore.html))
 
 #### Use Firestore in Native mode
 Access your collections through typed repositories, backed by a DataLoader implementation to support GraphQL.
@@ -140,25 +140,25 @@ Access your collections through typed repositories, backed by a DataLoader imple
 #### Simple transaction support
 Use annotations on your methods to make them transactional
 
-### gcp-firestore-backups ([documentation](packages/gcp-firestore-backups.md))
+### gcp-firestore-backups ([documentation](packages/gcp-firestore-backups.html))
 #### Automate Firestore Exports
 Run/schedule full or partial exports of Firestore into Google Cloud Storage
 #### Import into BigQuery
 Schedule Extract and Load jobs to export from Firestore into BigQuery
 
-### gcp-firestore-migrations ([documentation](./packages/gcp-firestore-migrations.md))
+### gcp-firestore-migrations ([documentation](./packages/gcp-firestore-migrations.html))
 #### Run migrations on a firestore database
 Bootstrap migrations to be run when server starts or create an endpoint to trigger them. Status of migrations and mutex lock is managed with Firestore.
 
-### gcp-google-auth ([documentation](./packages/gcp-google-auth.md))
+### gcp-google-auth ([documentation](./packages/gcp-google-auth.html))
 #### Google Auth utilities
 Utilities extending on [Google Auth Library](https://github.com/googleapis/google-auth-library-nodejs#readme), such as middleware to validate Google JWT.
 
-### gcp-storage ([documentation](./packages/gcp-storage.md))
+### gcp-storage ([documentation](./packages/gcp-storage.html))
 #### Use Cloud Storage in your app
 Simplifies client initialisation and common storage tasks
 
-### gcp-tasks ([documentation](./packages/gcp-tasks.md))
+### gcp-tasks ([documentation](./packages/gcp-tasks.html))
 #### Use Cloud Tasks in your app
 Simplifies client initialisation and common task operations
 

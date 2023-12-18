@@ -27,12 +27,12 @@ In most cases, you can simply search and replace your imports of `@mondomob/gae-
 
 The only exceptions to this are:
 * the [unsupported packages](#unsupported-packages)
-* [@mondomob/gae-js-migrations](https://mondo-mob.github.io/gae-js-docs/packages/gae-js-migrations.html) is specific to `Firestore` and thus has been renamed to [@mondokit/gcp-firestore-migrations](../packages/gcp-firestore-migrations.md)
+* [@mondomob/gae-js-migrations](https://mondo-mob.github.io/gae-js-docs/packages/gae-js-migrations.html) is specific to `Firestore` and thus has been renamed to [@mondokit/gcp-firestore-migrations](../packages/gcp-firestore-migrations.html)
 
 ## Breaking changes per package
 In addition to migration steps outlined in [Steps to migrate](#steps-to-migrate), the following specific breaking changes need to be considered.
-* [@mondokit/gcp-core](../packages/gcp-core.md)
-  * The default logger needs to be _explicitly_ set to use the `GCP` one, given the logger now resides in our [core](../packages/core.md) package that is cloud agnostic. Add the following to your initialisation file:
+* [@mondokit/gcp-core](../packages/gcp-core.html)
+  * The default logger needs to be _explicitly_ set to use the `GCP` one, given the logger now resides in our [core](../packages/core.html) package that is cloud agnostic. Add the following to your initialisation file:
 
     ```typescript
     import { defaultLoggerProvider, googleCloudLogger } from "@mondokit/gcp-core";
@@ -51,28 +51,28 @@ In addition to migration steps outlined in [Steps to migrate](#steps-to-migrate)
     * `GAEJS_OVERRIDES` => `MONDOKIT_CONFIG_OVERRIDES`
   * Removed deprecated items
     * `asArray` has been deprecated for a while. Replace with [lodash castArray](https://lodash.com/docs/4.17.15#castArray) instead, as it's exactly what this function did.
-* [@mondokit/gcp-tasks](../packages/gcp-tasks.md)
+* [@mondokit/gcp-tasks](../packages/gcp-tasks.html)
   * Search/replace all instances:
     * `gaeJsTask` => `appEngineTask`
-* [@mondokit/gcp-storage](../packages/gcp-storage.md)
+* [@mondokit/gcp-storage](../packages/gcp-storage.html)
   * Search/replace all instances:
     * `GaeJsStorageConfiguration` => `GcpStorageConfiguration`
     * `gaeJsStorageConfigurationSchema` => `gcpStorageConfigurationSchema`
-* [@mondokit/gcp-bigquery](../packages/gcp-bigquery.md)
+* [@mondokit/gcp-bigquery](../packages/gcp-bigquery.html)
   * Search/replace all instances:
     * `GaeJsBigQueryConfiguration` => `GcpBigQueryConfiguration`
     * `gaeJsBigQueryConfigurationSchema` => `gcpBigQueryConfigurationSchema`
-* [@mondokit/gcp-firestore](../packages/gcp-firestore.md) 
+* [@mondokit/gcp-firestore](../packages/gcp-firestore.html) 
   * removed the `@Transactional` annotation as it was based on the original _experimental decorators_. Rather than update this, we have kept the library lightweight and omitted it altogether.
   * Search/replace all instances:
     * `GaeJsFirestoreConfiguration` => `GcpFirestoreConfiguration`
     * `gaeJsFirestoreConfigurationSchema` => `gcpFirestoreConfigurationSchema`
-* [@mondokit/gcp-datastore](../packages/gcp-datastore.md) 
+* [@mondokit/gcp-datastore](../packages/gcp-datastore.html) 
   * removed the `@Transactional` annotation as it was based on the original _experimental decorators_. Rather than update this, we have kept the library lightweight and omitted it altogether.
   * Search/replace all instances:
     * `GaeJsDatastoreConfiguration` => `GcpDatastoreConfiguration`
     * `gaeJsDatastoreConfigurationSchema` => `gcpDatastoreConfigurationSchema`
-* [@mondokit/gcp-datastore-backups](../packages/gcp-datastore-backups.md)
+* [@mondokit/gcp-datastore-backups](../packages/gcp-datastore-backups.html)
   * Search/replace all instances:
     * `GaeJsDatastoreBackupConfiguration` => `GcpDatastoreBackupConfiguration`
     * `gaeJsDatastoreBackupConfigSchema` => `gcpDatastoreBackupConfigSchema`

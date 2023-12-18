@@ -92,4 +92,4 @@ migration file (via the `AutoMigration` interface with the `options` property). 
 
 | Property               | Type      | Default | Description                                                                                                        |
 |------------------------|-----------|---------|--------------------------------------------------------------------------------------------------------------------|
-| disableTimestampUpdate | `boolean` | `false` | If enabled, this will skip automatically updating timestamp values via [TimestampedRepository](./gcp-firestore.md) |
+| disableTimestampUpdate | `boolean` | `false` | If enabled, this will skip automatically updating timestamp values via [TimestampedRepository](./gcp-firestore.html) |
