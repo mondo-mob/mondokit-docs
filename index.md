@@ -77,8 +77,7 @@ app.use((err, req, res, next) => {
 
 ## History
 
-These libraries have most recently evolved from [GAE JS](https://github.com/mondo-mob/gae-js), authored by the same team. They have been re-branded,
-given they are not just useful for Google App Engine, updated for ESM, and cleaned up with deprecations removed.
+These libraries have most recently evolved from [GAE JS](https://github.com/mondo-mob/gae-js), authored by the same team. They have been re-branded, given they have a broader application than Google App Engine alone.
 
 ## Components
 
