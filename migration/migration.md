@@ -7,7 +7,7 @@ permalink: /migration-from-gae-js
 
 # Migration from gae-js
 
-Before you can migrate to using all `@mondokit` libraries, you need to ensure your project is ESM packaged and, if using typescript, on version 5 or higher. This library will _not work_ with `CommonJS` (`reequire`).
+Before you can migrate to using all `@mondokit` libraries, you need to ensure your project is ESM packaged and, if using typescript, on version 5 or higher. This library will _not work_ with `CommonJS` (`require`).
 Performing the migration from `CommonJS` to `ESM` is beyond this guide, as there are plenty of great guides available already online.
 
 If you cannot upgrade to `ESM` then you will need to defer upgrading to this library and continue with `gae-js`. Note that `gae-js` will work in an `ESM` build, so you can do the upgrade and make sure everything runs fine first.
