@@ -12,6 +12,8 @@ Use GCP Firebase Auth to authenticate your users
 
 > **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
 
+Find the source code at [gcp-firebase-auth on GitHub](https://github.com/mondo-mob/mondokit/tree/main/packages/gcp-firebase-auth).
+
 ## Installation
 
 ```sh

@@ -12,6 +12,8 @@ The core Google Cloud Platform (GCP) stuff needed for most apps.
 
 > **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
 
+Find the source code at [gcp-core on GitHub](https://github.com/mondo-mob/mondokit/tree/main/packages/gcp-core).
+
 ## Installation
 
 ```sh

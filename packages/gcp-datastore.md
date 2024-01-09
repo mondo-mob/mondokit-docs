@@ -12,6 +12,8 @@ Use Google Cloud Datastore (or Firestore in Datastore Mode) as your app db inclu
 
 > **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
 
+Find the source code at [gcp-datastore on GitHub](https://github.com/mondo-mob/mondokit/tree/main/packages/gcp-datastore).
+
 ## Installation
 
 ```sh

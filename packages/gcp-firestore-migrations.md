@@ -12,6 +12,8 @@ Set up and run migrations, with state stored in firestore and a mutex lock to en
 
 > **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
 
+Find the source code at [gcp-firestore-migrations on GitHub](https://github.com/mondo-mob/mondokit/tree/main/packages/gcp-firestore-migrations).
+
 ## Installation
 
 ```sh

@@ -13,8 +13,11 @@ this directly as it is likely referenced, and relevant utilities exported, via c
 
 > **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
 
+Find the source code at [core on GitHub](https://github.com/mondo-mob/mondokit/tree/main/packages/core).
+
 ## Installation
 
 ```sh
 npm install @mondokit/core
 ```
+

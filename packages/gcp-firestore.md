@@ -12,6 +12,8 @@ Use Firestore in Native mode as your app db including [DataLoader](https://githu
 
 > **Note:** `@mondokit` libs all require ESM. If your project still uses CommonJS, then you can continue using our previous incarnation, [gae-js](https://mondo-mob.github.io/gae-js-docs), until you can make the upgrade.
 
+Find the source code at [gcp-firestore on GitHub](https://github.com/mondo-mob/mondokit/tree/main/packages/gcp-firestore).
+
 ## Installation
 
 ```sh
